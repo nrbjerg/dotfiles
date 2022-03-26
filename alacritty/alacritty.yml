@@ -116,7 +116,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 11 # Fore some weird reason this has to be uneven for my neovim config to work
+  size: 12 # Fore some weird reason this has to be uneven for my neovim config to work
   
   # Offsets for glyphs ext.
   offset:
@@ -135,10 +135,67 @@ draw_bold_text_with_bright_colors: true
 
 # COLOR SCHEMES
 schemes:
-  ### Doom One ###
-  doom-one: &one-monokai
+  mountain: &mountain
+    # Default colors
     primary:
-      background: '#242730'
+      background: '0x101216'
+      foreground: '0xa7b5cd'
+
+      # Normal colors
+      normal:
+        black:   '0x101216'
+        red:     '0x973d46'
+        green:   '0x7ca25c'
+        yellow:  '0xe0ae4a'
+        blue:    '0x517ba5'
+        magenta: '0x94628a'
+        cyan:    '0x5f9f9e'
+        white:   '0xb4c0d4'
+
+        # Bright colors
+        bright:
+          black:   '0x1b1e25'
+          red:     '0x973d46'
+          green:   '0x7ca25c'
+          yellow:  '0xe0ae4a'
+          blue:    '0x517ba5'
+          magenta: '0x94628a'
+          cyan:    '0x5f9f9e'
+          white:   '0xb4c0d4'
+
+  ### Doom One
+  doom-one: &doom-one
+    primary:
+      background: '#282c34'
+      foreground: '#bbc2cf'
+    cursor:
+      text: CellBackground
+      cursor: '#528bff'
+    selection:
+      text: CellForeground
+      background: '#3e4451'
+    normal:
+      black:   '#1c1f24'
+      red:     '#ff6c6b'
+      green:   '#98be65'
+      yellow:  '#da8548'
+      blue:    '#51afef'
+      magenta: '#c678dd'
+      cyan:    '#5699af'
+      white:   '#202328'
+    bright:
+      black:   '#5b6268'
+      red:     '#da8548'
+      green:   '#4db5bd'
+      yellow:  '#ecbe7b'
+      blue:    '#3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
+      magenta: '#a9a1e1'
+      cyan:    '#46d9ff'
+      white:   '#dfdfdf'
+
+  one-monokai: &one-monokai
+    primary:
+      background: '#282c34'
       foreground: '#bbc2cf'
     cursor:
       text: CellBackground
@@ -150,13 +207,13 @@ schemes:
       black:   '#1c1f24'
       red:     '#D35D66'
       green:   '#86B356'
-      yellow:  '#da8548'
+      yellow:  '#ecbe7b'
       blue:    '#3071db'
       magenta: '#B56BCB'
       cyan:    '#5699af'
       white:   '#bbc2cf'
     bright:
-      black:   '#5b6268'
+      black:   '#1c1f24'
       red:     '#F36D76'
       green:   '#99C366' # '#4db5bd'
       yellow:  '#ecbe7b'
@@ -165,33 +222,65 @@ schemes:
       cyan:    '#46d9ff'
       white:   '#dfdfdf'
 
-  edge_dark_def:  &edge_dark_default
+  nordic: &nordic
     primary:
-      background: "0x2c2e34"
-      foreground: "0xc5cdd9"
-  
+      background: '#e8f0fd'
+      foreground: '#101115'
+    cursor:
+      text: CellBackground
+      cursor: '#3061db'
+    selection:
+      text: CellForeground
+      background: '#242730'
     normal:
-      black: "0x3e4249"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
-  
+      black:   '#101115'
+      red:     '#d12c00'
+      green:   '#86B356'
+      yellow:  '#ecbe7b'
+      blue:    '#455a79'
+      magenta: '#B56BCB'
+      cyan:    '#3d5176'
+      white:   '#b5bcc4'
     bright:
-      black: "0x3e4249"
-      red: "0xec7279"
-      green: "0xa0c980"
-      yellow: "0xdeb974"
-      blue: "0x6cb6eb"
-      magenta: "0xd38aea"
-      cyan: "0x5dbbc1"
-      white: "0xc5cdd9"
-  
-  onedark: &onedark 
-      # Norma    
+      black:   '#101115'
+      red:     '#d12c00'
+      green:   '#99C366' # '#4db5bd'
+      yellow:  '#ecbe7b'
+      blue:    '#3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
+      magenta: '#c678dd'
+      cyan:    '#3d5176'
+      white:   '#b5bcc4'
+
+  paradise: &paradise
+    primary:
+      # Default colors  primary:
+      foreground: '#E8E3E3'
+      background: '#151515'
+
+      # Normal colors
+    normal:
+      black:   '#E8E3E3'
+      red:     '#B66467'
+      green:   '#8C977D'
+      yellow:  '#D9BC8C'
+      blue:    '#8DA3B9'
+      magenta: '#A988B0'
+      cyan:    '#8AA6A2'
+      white:   '#151515'
+
+    # Bright colors
+    bright:
+      black:   '#C9C4C4'
+      red:     '#B66467'
+      green:   '#8C977D'
+      yellow:  '#D9BC8C'
+      blue:    '#8DA3B9'
+      magenta: '#A988B0'
+      cyan:    '#8AA6A2'
+      white:   '#151515'
+
+  onedark: &onedark
+    # Normal colors
     primary:
       background: '0x1e2127'
       foreground: '0xabb2bf'
@@ -206,31 +295,9 @@ schemes:
       cyan:    '0x56b6c2'
       white:   '0x828791'
 
-  everforest_dark_soft: &everforest_dark_soft
-    primary:
-      background: '#323d43'
-      foreground: '#d3c6aa'
-    normal:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
-    bright:
-      black:   '#4b565c'
-      red:     '#e67e80'
-      green:   '#a7c080'
-      yellow:  '#dbbc7f'
-      blue:    '#7fbbb3'
-      magenta: '#d699b6'
-      cyan:    '#83c092'
-      white:   '#d3c6aa'
-  
   ### Nord ###
   nord: &nord
+
     # Default colors
     primary:
       background: '0x2E3440'
@@ -244,19 +311,19 @@ schemes:
       yellow:  '0xEBCB8B'
       blue:    '0x81A1C1'
       magenta: '0xB48EAD'
-      cyan:    '0x88C0D0'
+      cyan:    '0x8FBCBB'
       white:   '0xE5E9F0'
 
     # Bright colors
     bright:
-      black:   '0x4C566A'
+      black:   '0x3B4252'
       red:     '0xBF616A'
       green:   '0xA3BE8C'
       yellow:  '0xEBCB8B'
       blue:    '0x81A1C1'
       magenta: '0xB48EAD'
       cyan:    '0x8FBCBB'
-      white:   '0xECEFF4'
+      white:   '0xE5E9F0'
 
 colors: *one-monokai
   
@@ -264,7 +331,7 @@ colors: *one-monokai
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0 
+window.opacity: 1.0
 # background_opacity: 0.80
 
 #selection:

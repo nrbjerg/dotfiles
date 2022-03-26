@@ -1,0 +1,278 @@
+# set Super key
+set $mod Mod4
+
+################# Define the movements keys - variables
+
+set $up l
+set $down k
+set $left j
+set $right h
+
+################# Single and Dual screen
+
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1-0 --mode 1920x1080 --left-of eDP-1
+
+# CONKY
+exec --no-startup-id conky -c ~/.config/conky/modified.conkyrc &
+
+# current setup
+
+set $firstMonitor eDP-1
+set $secondMonitor HDMI-1-0
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+
+bindsym $mod+Ctrl+1 move workspace to output $firstMonitor
+bindsym $mod+Ctrl+2 move workspace to output $secondMonitor
+bindsym $mod+Ctrl+l move workspace to output left
+bindsym $mod+Ctrl+h move workspace to output right
+
+################# menu's in arcolinux
+
+# start rofi small
+bindsym $mod+r exec --no-startup-id rofi -show drun
+
+# ArcoLinux Logout
+bindsym $mod+x exec --no-startup-id arcolinux-logout
+
+################# reload changed configuration     
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+################# Stopping an application          
+
+# kill focused window
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+################# Moving around in i3              
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# chagne focus:
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+################# moving around workspaces         
+
+# switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+
+################# Tiling parameters                
+
+# orientation for new workspaces
+default_orientation horizontal
+
+# split orientation
+bindsym $mod+Escape split h
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+# Super + F in arcolinux is execute thunar
+bindsym $mod+Ctrl+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+# qwerty/azerty issue for letter z
+bindsym $mod+s layout stacking
+bindsym $mod+z layout tabbed
+bindsym $mod+Shift+s layout toggle split
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+################# resize
+
+# Resizing by 1
+bindsym $mod+Mod1+h resize shrink width 2 px or 2 ppt
+bindsym $mod+Mod1+k resize grow height 2 px or 2 ppt
+bindsym $mod+Mod1+j resize shrink height 2 px or 2 ppt
+bindsym $mod+Mod1+l resize grow width 2 px or 2 ppt
+
+font pango:Noto Mono Regular 13
+
+################# autostart - execute applications at boot time
+
+# Autotiling
+exec_always --no-startup-id autotiling
+
+for_window [class="Spotify"] focus
+
+# Authentication dialog
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Updater
+exec --no-startup-id pamac-tray
+
+# network
+exec --no-startup-id nm-applet
+
+# num lock activated
+exec_always --no-startup-id numlockx on
+
+# volume
+exec --no-startup-id volumeicon
+
+# feh sets wallpaper
+exec --no-startup-id sh ~/.fehbg &
+
+
+################# system applications       
+
+exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+
+################# applications keyboard shortcuts  
+
+# terminal
+bindsym $mod+Return exec --no-startup-id alacritty;focus
+
+# arcolinux-logout
+bindsym control+mod1+l exec --no-startup-id arcolinux-logout
+
+# pavucontrol
+bindsym $mod+o mode "launch mode"
+
+mode "launch mode" {
+     bindsym w exec --no-startup-id brave;focus;mode "default"
+     bindsym e exec --no-startup-id emacs;mode "default"
+     bindsym v exec --no-startup-id pavucontrol;focus;mode "default"
+     bindsym f exec --no-startup-id thunar;focus;mode "default"
+     bindsym m exec --no-startup-id spotify;focus;mode "default"
+     bindsym d exec --no-startup-id discord;focus;mode "default"
+     bindsym s exec --no-startup-id xfce4-screenshooter;focus;mode "default"
+
+     bindsym Escape mode "default"
+     bindsym Return mode "default"
+}
+
+bindsym control+mod1+u exec --no-startup-id pavucontrol
+
+# music
+bindsym $mod+m exec --no-startup-id spotify;focus
+
+################# screenshots                      
+
+bindsym Control+Print exec --no-startup-id xfce4-screenshooter
+
+################# floating or tiled rules         
+
+for_window [class="Arcolinux-welcome-app.py"] floating enable
+# for_window [class="Arcolinux-tweak-tool.py"] floating enable
+for_window [class="Arcolinux-calamares-tool.py"] floating enable
+for_window [class="Bleachbit"] floating disable
+for_window [class="Blueberry.py"] floating enable
+for_window [class="Brasero"] floating disable
+for_window [class="Galculator"] floating enable
+for_window [class="Gnome-disks"] floating disable
+for_window [class="^Gnome-font-viewer$"] floating enable
+for_window [class="^Gpick$"] floating enable
+for_window [class="Hexchat"] floating disable
+for_window [class="Imagewriter"] floating enable
+for_window [class="Font-manager"] floating enable
+# for_window [class="qt5ct|Lxappearance] floating enable
+for_window [class="Nitrogen"] floating disable
+for_window [class="Pavucontrol"] floating disable
+for_window [class="Peek"] floating enable
+for_window [class="^Skype$"] floating enable
+for_window [class="^Spotify$"] floating disable
+for_window [class="System-config-printer.py"] floating enable
+for_window [class="Unetbootin.elf"] floating enable
+for_window [class="Usb-creator-gtk"] floating enable
+for_window [class="^Vlc$"] floating disable
+for_window [class="Wine"] floating disable
+for_window [class="Xfburn"] floating disable
+for_window [class="Xfce4-appfinder"] floating enable
+for_window [class="Xfce4-settings-manager"] floating disable
+for_window [class="Xfce4-taskmanager"] floating enable
+
+# for_window [instance="gimp"] floating disable
+for_window [instance="script-fu"] border normal
+for_window [instance="variety"] floating disable
+
+for_window [title="Copying"] floating enable
+for_window [title="Deleting"] floating enable
+for_window [title="Moving"] floating enable
+for_window [title="^Terminator Preferences$"] floating enable
+
+# for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="^Preferences$"] floating enable
+for_window [window_role="setup"] floating enable
+
+################# audio settings
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
+
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+
+################# xbacklight                       
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+
+################# border control
+
+# Border control
+hide_edge_borders both
+bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
+
+# new_window pixel 1
+new_window normal
+
+# new_float pixel 1
+new_float normal
+
+################# Popups  control                  
+
+popup_during_fullscreen smart
+
+################# i3 gaps next                     
+
+for_window [class="^.*"] border pixel 2
+gaps inner 0
+gaps outer 0
+
+################# picom of i3wm                  
+
+# if you want transparency on non-focused windows, ...
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+
+bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
+
+################# bar appearance                   
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
