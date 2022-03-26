@@ -1,0 +1,12 @@
+* {
+    bg:  #282c34;
+    bg-alt: #21242b;
+    border-col: #a9a1e1;
+    selected-col: #c678dd;
+    highlight: #98be65;
+    highlight-alt: #51afef;
+    fg: #bbc2cf;
+    fg-alt: #5b6268;
+    grey: #565c64;
+    width: 600;
+}
