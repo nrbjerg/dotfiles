@@ -35,7 +35,7 @@ font-2 = "unifont:fontformat=truetype:size=11;2"
 
 modules-left = i3 title
 modules-center = date
-modules-right = cpu memory audio battery wifi ethernet session
+modules-right = cpu memory audio battery wifi ethernet
 
 cursor-click = pointer
 
@@ -45,7 +45,7 @@ inherit = bar/main
 
 modules-left = i3 title
 modules-center = date
-modules-right = cpu memory audio battery wifi ethernet session
+modules-right = cpu memory audio battery wifi ethernet
 
 [settings]
 screenchange-reload = true
@@ -57,16 +57,6 @@ format-foreground = ${colors.magenta}
 label = %title%
 label-maxlen = 30
 format-padding = 1
-
-[module/spotify]
-type = custom/script
-interval = 1
-format = <label>
-exec = python ~/.config/polybar/spotify.py -f '{play_pause} {artist}: {song}'
-format-foreground = ${colors.blue}
-click-left = playerctl --player=spotify previus
-click-right = playerctl --player=spotify next
-click-middle = playerctl --player=spotify play-pause
 
 [module/battery]
 type = internal/battery
@@ -184,14 +174,6 @@ format-muted-padding = 1
 
 click-right = pavucontrol&
 
-[module/session]
-type = custom/text
-
-click-left = arcolinux-logout
-content = "⏻ "
-content-foreground = ${colors.red}
-content-padding-right = 1
-
 [module/wifi]
 type = internal/network
 interface = wlo1
@@ -199,6 +181,7 @@ interval = 1.0
 
 format-connected = <ramp-signal><label-connected>
 label-connected =  %essid%
+click-left = nm-connection-editor
 label-connected-foreground = ${colors.fg}
 ramp-signal-0 = "直 "
 ramp-signal-foreground = ${colors.yellow}
