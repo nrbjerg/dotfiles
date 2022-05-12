@@ -1,9 +1,9 @@
 [colors]
 fg = #bbc2cf
-bg = #21242b
+bg = #1d2026
 
 red = #e36d76
-green = #99bd65
+green = #98be65
 yellow = #ecbe7b
 magenta = #c678dd
 violet = #c3ace7
@@ -87,10 +87,11 @@ format-discharging-padding = 1
 [module/i3]
 type = internal/i3
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
+ws-icon-0 = 1;ﴬ
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;ﭮ
 
 format = <label-state> <label-mode>
 
