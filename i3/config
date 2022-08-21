@@ -192,12 +192,13 @@ popup_during_fullscreen smart
 ################# i3 gaps next                     
 
 for_window [class="^.*"] border pixel 2
-gaps inner 0
-gaps outer 0
+gaps inner 3
+gaps outer 3
 
-################# bar appearance                   
+################# bar & conky
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id -c conky $HOME/.config/conky/conkyrc
 
 # Loguout ext.
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {

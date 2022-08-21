@@ -1,15 +1,14 @@
 [colors]
-fg = #bbc2cf
+fg = #eeeeee
 
-bg = #1d2026
-bg-alt = #282c34
+bg = #1a181a
+bg-alt = #222222
 
-red = #e36d76
-green = #98be65
-yellow = #ecbe7b
-magenta = #c678dd
-violet = #c3ace7
-blue = #51afef
+red = #c16759
+green = #70955b
+yellow = #b2823d
+violet = #a2729a
+blue = #688cb4
 
 [bar/main]
 width = 100%
@@ -31,10 +30,10 @@ enable-ipc = true
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-font-0 = "Iosevka Nerd Font:style=Bold:size=11;2"
-font-1 = "Iosevka Nerd Font:style=Medium:size=11;2"
+font-0 = "JetBrains Mono Nerd Font:style=Bold:size=11;2"
+font-1 = "JetBrains Mono Nerd Font:style=Medium:size=11;2"
 font-2 = "unifont:fontformat=truetype:size=11;2"
-font-3 = "Iosevka Nerd Font:style=Bold:size=15;2"
+font-3 = "JetBrains Mono Nerd Font:style=Bold:size=15;2"
 
 modules-left = i3 title
 modules-center = date
@@ -56,7 +55,7 @@ screenchange-reload = true
 [module/title]
 type = internal/xwindow
 format = <label>
-format-foreground = ${colors.magenta}
+format-foreground = ${colors.violet}
 label = %title%
 label-maxlen = 30
 format-padding = 1
@@ -160,7 +159,7 @@ format-connected = <ramp-signal><label-connected>
 label-connected = "%downspeed%"
 click-left = nm-connection-editor
 ramp-signal-0 = "直  "
-ramp-signal-foreground = ${colors.magenta}
+ramp-signal-foreground = ${colors.violet}
 format-connected-padding = 1
 
 format-disconnected = <label-disconnected>
@@ -175,7 +174,7 @@ interface = eno1
 interval = 1.0
 
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.magenta}
+format-connected-prefix-foreground = ${colors.violet}
 format-connected = <label-connected>
 label-connected = "%downspeed%"
 format-padding = 1
@@ -293,6 +292,7 @@ format-background = ${colors.bg-alt}
 type = custom/text
 content = "%{T4}%{T-}"
 content-foreground = ${colors.bg-alt}
+
 
 [module/round-right]
 type = custom/text

@@ -64,12 +64,5 @@ set.synmaxcol = 240                          -- Max column for syntax highlight
 set.updatetime = 700                         -- ms to wait for trigger an event
 
 -- MODIFIED THEME
-require('base16-colorscheme').setup({
-    base00 = '#282c34', base01 = '#21242b', base02 = '#21242b', base03 = '#5b6268',
-    base04 = '#5b6268', base05 = '#bbc2cf', base06 = '#21242b', base07 = '#bbc2cf',
-    base08 = '#a9a1e1', base09 = '#c678dd', base0A = '#c678dd', base0B = '#ecbe7b',
-    base0C = '#ecbe7b', base0D = '#98be65', base0E = '#51afef', base0F = '#98be65',
-})
-
-
 require('colorizer').setup()
+vim.cmd[[colorscheme nord]]

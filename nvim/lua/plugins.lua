@@ -9,9 +9,9 @@ end
 return require('packer').startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim"
-
+  use { "ellisonleao/gruvbox.nvim" }
   -- UI: 
-  use "ful1e5/onedark.nvim"
+  use "shaunsingh/nord.nvim"
   use "nvim-lualine/lualine.nvim"
   use "nvim-treesitter/nvim-treesitter"
   use {
@@ -24,9 +24,6 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     }
   }
-  use "NTBBloodbath/doom-one.nvim"
-  use "RRethy/nvim-base16"
-  use "projekt0n/github-nvim-theme"
   use "norcalli/nvim-colorizer.lua"
   
   -- Completions

@@ -97,22 +97,22 @@ tabspaces: 3
 font:
   # Normal (roman) font face
   normal:
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Nerd Font
     style: Semi Bold
 
   # Bold font face
   bold:
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Nerd Font
     style: Bold Italic
 
   # Point size
@@ -131,34 +131,63 @@ draw_bold_text_with_bright_colors: false
 
 # COLOR SCHEMES
 schemes:
-  one-monokai: &modified
+  modified: &modified
     primary:
       background: '#282c34'
       foreground: '#bbc2cf'
     cursor:
       text: CellBackground
-      cursor: '#528bff'
+      cursor: CellForeground
     selection:
-      text: CellForeground
-      background: '#242730'
+      text: '#21242b'
+      background: '#bbc2cf'
     normal:
-      black:   '#1c1f24'
-      red:     '#D35D66'
-      green:   '#86B356'
+      black:   '#1b2229'
+      red:     '#f97a7b'
+      green:   '#98be65'
       yellow:  '#ecbe7b'
-      blue:    '#3071db'
-      magenta: '#B56BCB'
-      cyan:    '#5699af'
-      white:   '#bbc2cf'
-    bright:
-      black:   '#5b6268'
-      red:     '#F36D76'
-      green:   '#99C366' # '#4db5bd'
-      yellow:  '#ecbe7b'
-      blue:    '#51afef'   # This is 2257a0 in Doom Emacs but I lightened it.
-      magenta: '#c678dd'
+      blue:    '#51afef'
+      magenta: '#d193e3'
       cyan:    '#46d9ff'
       white:   '#dfdfdf'
+    bright:
+      black:   '#1b2229'
+      red:     '#f97a7b'
+      green:   '#98be65'
+      yellow:  '#ecbe7b'
+      blue:    '#51afef'
+      magenta: '#d193e3'
+      cyan:    '#46d9ff'
+      white:   '#dfdfdf'
+
+  minimal: &minimal
+    primary:
+      background: '#222222'
+      foreground: '#aeaeae'
+    cursor:
+      text: CellBackground
+      cursor: "#688cb4"
+    selection:
+      text: '#1a181a'
+      background: '#688cb4'
+    normal:
+      black:   '#1a181a'
+      red:     '#c16759'
+      green:   '#70955b'
+      yellow:  '#b2823d'
+      blue:    '#688cb4'
+      magenta: '#a2729a'
+      cyan:    '#22a5d4'
+      white:   '#eeeeee'
+    bright:
+      black:   '#1a181a'
+      red:     '#c16759'
+      green:   '#70955b'
+      yellow:  '#b2823d'
+      blue:    '#688cb4'
+      magenta: '#a2729a'
+      cyan:    '#22a5d4'
+      white:   '#eeeeee'
 
 colors: *modified
   
