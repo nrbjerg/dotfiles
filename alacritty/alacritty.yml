@@ -142,7 +142,7 @@ schemes:
       text: '#21242b'
       background: '#bbc2cf'
     normal:
-      black:   '#1b2229'
+      black:   '#7a8186'
       red:     '#f97a7b'
       green:   '#98be65'
       yellow:  '#ecbe7b'
@@ -151,7 +151,7 @@ schemes:
       cyan:    '#46d9ff'
       white:   '#dfdfdf'
     bright:
-      black:   '#1b2229'
+      black:   '#7a8186'
       red:     '#f97a7b'
       green:   '#98be65'
       yellow:  '#ecbe7b'
@@ -160,6 +160,37 @@ schemes:
       cyan:    '#46d9ff'
       white:   '#dfdfdf'
 
+  modified: &graphite
+    primary:
+      background: '#2c2c2c'
+      foreground: '#fdfdfd'
+    cursor:
+      text: CellBackground
+      cursor: CellForeground
+    selection:
+      text: '#262626'
+      background: '#ffffff'
+    normal:
+      black:   '#101010'
+      red:     '#343434'
+      green:   '#4b4949'
+      yellow:  '#6a6e72'
+      blue:    '#6ba4e7'
+      magenta: '#c5c5c5'
+      cyan:    '#dfdfdf'
+      white:   '#f5f5f5'
+
+    bright:
+      black:   '#101010'
+      red:     '#343434'
+      green:   '#4b4949'
+      yellow:  '#6a6e72'
+      blue:    '#6ba4e7'
+      magenta: '#c5c5c5'
+      cyan:    '#dfdfdf'
+      white:   '#f5f5f5'
+
+ 
   minimal: &minimal
     primary:
       background: '#222222'

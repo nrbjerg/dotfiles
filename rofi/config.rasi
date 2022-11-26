@@ -25,6 +25,8 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     background-color: @bg;
+    border: 1px;
+    border-color: @highlight;
 }
 
 mainbox {
@@ -41,8 +43,8 @@ inputbar {
 
 prompt {
     background-color: @highlight;
-    padding: 6px;
     text-color: @bg;
+    padding: 6px;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
 }
@@ -79,7 +81,7 @@ element-icon {
 
 element selected {
     background-color:  @bg-alt;
-    text-color: @highlight-alt;
+    text-color: @fg;
 }
 
 mode-switcher {

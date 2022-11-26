@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [[ brightnessctl =~ ([0-9]*%) ]]; then 
+  echo $?
+else 
+  echo "0%"

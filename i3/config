@@ -192,8 +192,8 @@ popup_during_fullscreen smart
 ################# i3 gaps next                     
 
 for_window [class="^.*"] border pixel 2
-gaps inner 3
-gaps outer 3
+gaps inner 8
+gaps outer 0
 
 ################# bar & conky
 

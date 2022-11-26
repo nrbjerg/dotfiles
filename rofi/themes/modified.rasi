@@ -1,10 +1,9 @@
 * {
-    bg:  #282c34;
-    bg-alt: #21242b;
-    border-col: #a9a1e1;
+    bg:  #1d2026;
+    bg-alt: #282c34;
     selected-col: #c678dd;
-    highlight: #98be65;
-    highlight-alt: #51afef;
+    highlight: #51afef;
+    highlight-alt: #a9a1e1;
     fg: #bbc2cf;
     fg-alt: #5b6268;
     grey: #565c64;
