@@ -10,7 +10,7 @@ set $right h
 
 ################# Single and Dual screen
 
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1-0 --mode 1920x1080 --left-of eDP-1
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --right-of eDP-1
 
 # current setup
 
@@ -123,7 +123,7 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id volumeicon
 
 # feh sets wallpaper
-exec --no-startup-id sh ~/.fehbg &
+exec --no-startup-id feh --no-fehbg --bg-fill '/home/nrbjerg/wallpapers/wallpaper.png' & 
 
 
 ################# applications keyboard shortcuts

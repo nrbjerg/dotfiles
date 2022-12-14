@@ -9,6 +9,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch polybar
 polybar main -c $(dirname $0)/config &
 
-if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
+if [[ $(xrandr -q | grep 'HDMI-1 connected') ]]; then
 	polybar external -c $(dirname $0)/config &
 fi

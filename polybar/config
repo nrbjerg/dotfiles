@@ -43,7 +43,7 @@ modules-right = cpu memory battery audio brightness wifi ethernet
 cursor-click = pointer
 
 [bar/external]
-monitor = HDMI-1-0
+monitor = HDMI-1
 inherit = bar/main
 
 modules-left = i3 title
@@ -60,11 +60,6 @@ format-foreground = ${colors.magenta}
 label = %title%
 label-maxlen = 30
 format-padding = 1
-
-#[module/workspace]
-#type = custom/script
-#interval = 0.1
-#exec = "python3 ~/.config/polybar/workspaces.py"
 
 [module/i3]
 type = internal/i3
@@ -150,7 +145,7 @@ click-right = pavucontrol&
 
 [module/wifi]
 type = internal/network
-interface = wlo1
+interface = wlp5s0
 interval = 1.0
 
 format-connected = <ramp-signal><label-connected>
@@ -168,7 +163,7 @@ format-disconnected-padding = 1
 
 [module/ethernet]
 type = internal/network
-interface = eno1
+interface = enp4s0
 interval = 1.0
 
 format-connected-prefix = " "
@@ -179,8 +174,8 @@ format-padding = 1
 
 #[module/battery]
 #type = internal/battery
-#battery = BAT1
-#adapter = ADPD
+#battery = BAT0
+#adapter = AC
 #full-at = 98
 #format-charging = <ramp-capacity> <label-charging> ﮣ
 #format-charging-foreground = ${colors.green}
@@ -205,8 +200,8 @@ format-padding = 1
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ADPD
+battery = BAT0
+adapter = AC
 full-at = 98
 
 label-charging = %percentage%%
