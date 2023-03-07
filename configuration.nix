@@ -8,20 +8,21 @@
 with pkgs;
 let 
   my-python-packages = python-packages: with python-packages; [
+    numba
     numpy
+    galois
     pandas
     matplotlib
     requests
     mypy
-    pyls-black
-    pyls-isort
-    pyls-mypy
+    python-lsp-server
     flake8
     pytest
+    pytest-cov
     flask
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
-  RStudio-with-my-packages = rstudioWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts faraway Hmisc purrr ]; };
+  RStudio-with-my-packages = rstudioWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts faraway Hmisc purrr forecast fable zoo xts quantmod Quandl astsa]; };
 in
 {
   imports =
@@ -38,6 +39,7 @@ in
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  powerManagement.cpuFreqGovernor = "performance";
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -171,19 +173,27 @@ in
     git
     gh
     neofetch 
+    termdown
     exa
     psmisc # Killall ect.
+    htop
     thefuck
     libtool
     libvterm
+    sqlite
+    sageWithDoc
 
-    ### Programming langues & latex. ###
-    # Python, R & Latex
+    # Latex
+    (aspellWithDicts (dicts: with dicts; [ en en-computers en-science ]))
     texlive.combined.scheme-full
     texlab
+    languagetool
+
+    # R
     RStudio-with-my-packages
+
+    # Python
     python-with-my-packages
-    python-language-server
 
     # C / C++
     cmake
@@ -205,10 +215,18 @@ in
 
     ### Editors ###
     ((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
-      epkgs.vterm
+     epkgs.vterm
     ]))
     neovim
-
+    helix
+        
+    ### Email ###
+    mu
+    isync
+    pass
+    gnupg
+    pinentry
+    
     ### WM / Ricing ###
     polybar 
     rofi
@@ -262,5 +280,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
 }

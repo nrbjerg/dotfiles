@@ -40,9 +40,13 @@ bindsym $mod+Ctrl+h move workspace to output right
 bindsym $mod+r --release exec --no-startup-id "rofi -show drun"
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+k --release exec --no-startup-id "killall .polybar-wrappe && $HOME/.config/polybar/launch.sh &"
 bindsym $mod+Shift+r restart
-# reload the configuration file
 bindsym $mod+Shift+c reload
+bindsym $mod+Shift+l --release exec --no-startup-id "xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --left-of eDP-1"
+bindsym $mod+Shift+r --release exec --no-startup-id "xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --right-of eDP-1"
+
+# reload the configuration file
 
 ################# Stopping an application          
 
@@ -123,7 +127,7 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id volumeicon
 
 # feh sets wallpaper
-exec --no-startup-id feh --no-fehbg --bg-fill '/home/nrbjerg/wallpapers/wallpaper.png' & 
+exec --no-startup-id feh --no-fehbg --bg-fill '/home/nrbjerg/wallpapers/forest.jpg' &
 
 
 ################# applications keyboard shortcuts
