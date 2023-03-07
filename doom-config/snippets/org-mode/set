@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: set
+# uuid: set
+# key: set
+# condition: t
+# --
+\left\\{$0\right\\}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: textbf
+# uuid: textbf
+# key: tb
+# condition: t
+# --
+\\textbf{$0}

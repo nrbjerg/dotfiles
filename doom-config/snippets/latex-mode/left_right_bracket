@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: left_right_bracket
+# uuid: left_right_bracket
+# key: lrb
+# condition: t
+# --
+\\left[$0\\right]

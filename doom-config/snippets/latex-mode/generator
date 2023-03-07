@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: generator
+# uuid: generator
+# key: gen
+# condition: t
+# --
+\\gen{$0}

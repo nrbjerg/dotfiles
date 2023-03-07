@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: typing
+# uuid: typing
+# key: ty
+# condition: t
+# --
+from typing import $0

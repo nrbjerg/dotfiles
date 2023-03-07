@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: inline equation
+# uuid: inline equation
+# key: ieq
+# condition: t
+# --
+\$$0\$

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: remark
+# uuid: remark
+# key: rem
+# condition: t
+# --
+\\begin{remark}
+    $0
+\\end{remark}

@@ -1,0 +1,28 @@
+#+title: Agenda
+
+* DG
+** TODO [#A] Presentations 1 & 2 [3/4] <2023-01-06 Fri>
++ [X] Read 1.1 - 1.3
++ [X] Read 2.1 - 2.3
++ [-] Write presentation 1 (Example)
++ [X] Write presentation 2
+** TODO [#A] Presentations 3 & 4 [2/4] <2023-01-07 Sat>
++ [X] Read chapter 4
++ [X] Read 5.1 - 5.4 & 5.6
++ [-] Write presentation 3 (Example)
++ [-] Write presentation 4 (Last proof)
+** TODO [#A] Presentations 5 & 6 [4/5] <2023-01-08 Sun>
++ [X] Read 6.1 - 6.2
++ [X] Read 7.1 - 7.3
++ [X] Read 8.1 - 8.2
++ [X] Write presentation 5
++ [ ] Write presentation 6
+** TODO [#A] Presentations 7 & 8 [2/4] <2023-01-09 Mon>
++ [X] Read 9.1 - 9.3
++ [ ] Read 10 - 10.2
++ [ ] Write presentation 7
++ [X] Write presentation 8
+** TODO [#A] Presentations 9 & 10 [0/3] <2023-01-10 Tue>
++ [ ] Read 13.1 - 13.4
++ [ ] Write presentation 9
++ [ ] Write presentation 10

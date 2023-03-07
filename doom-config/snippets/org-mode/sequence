@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sequence
+# uuid: sequence
+# key: $seq
+# condition: t
+# --
+$($1_$2)_{$2 \in \mathbb{N}}$0

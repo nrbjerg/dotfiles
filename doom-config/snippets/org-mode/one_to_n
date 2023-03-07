@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: one_to_n
+# uuid: one_to_n
+# key: 1n
+# condition: t
+# --
+1, \ldots, $0

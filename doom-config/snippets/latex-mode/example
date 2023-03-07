@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: example
+# uuid: example
+# key: exmp
+# condition: t
+# --
+\\begin{example}\label{exmp:$1}
+    $0
+\\end{example}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: iff
+# uuid: iff
+# key: iff
+# condition: t
+# --
+if and only if

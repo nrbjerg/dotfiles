@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: $list
+# uuid: $list
+# key: $list
+# condition: t
+# --
+$$1_1, $1_2, \ldots $1_$0

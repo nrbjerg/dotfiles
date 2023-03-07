@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: matrix_element_i_n
+# uuid: matrix_element_i_n
+# key: mein
+# condition: t
+# --
+\\begin{bmatrix} $1_{$2} & \cdots & $1_{$3} \\end{bmatrix}$0

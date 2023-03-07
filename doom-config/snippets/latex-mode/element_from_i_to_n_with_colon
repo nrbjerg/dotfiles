@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: element_from_i_to_n_with_colon
+# uuiid: element_from_i_to_n_with_colon
+# key: enic
+# condition: t
+# --
+$1_{$2} : \ldots : $1_{$3}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: equation_followed_by_word
+# uuid: -
+# key: -
+# condition: t
+# --
+$$1$-$0

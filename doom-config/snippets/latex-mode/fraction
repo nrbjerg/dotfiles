@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fraction
+# uuid: fraction
+# key: /
+# condition: t
+# --
+\frac{$1}{$2}$0

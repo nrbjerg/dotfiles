@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: subsection
+# uuid: subsection
+# key: subs
+# condition: t
+# --
+\\subsection{$0}

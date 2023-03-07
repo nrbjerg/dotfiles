@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: define_with_return
+# uuid: define_with_return
+# key: defr
+# condition: t
+# --
+def $1 ($2) -> $3:
+    $0

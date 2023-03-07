@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: assume
+# uuid: assume
+# key: ass
+# condition: t
+# --
+assume

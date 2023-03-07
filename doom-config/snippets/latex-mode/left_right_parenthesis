@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: left_right_parenthesis
+# uuid: left_right_parenthesis
+# key: lrp
+# condition: t
+# --
+\\left($0\\right)

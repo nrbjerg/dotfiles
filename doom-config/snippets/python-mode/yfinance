@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: yfinance
+# uuid: yfinance
+# key: yf
+# condition: t
+# --
+import yfinance as yf
