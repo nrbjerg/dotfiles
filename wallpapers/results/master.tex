@@ -1,0 +1,82 @@
+\documentclass{article}
+
+
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[paperwidth=9.6in, paperheight=5.4in, left=5mm, right=5mm, top=10mm, bottom=5mm]{geometry}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\e}{\mathrm{e}}
+
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\definecolor{fg}{RGB}{187, 194, 207}
+\definecolor{bg_alt}{RGB}{29, 32, 38}
+\definecolor{bg}{RGB}{40, 44, 52}
+
+
+\begin{document}
+  \AddToHook{shipout/background}{%
+    \put (0in, -\paperheight){\includegraphics[width=\paperwidth, height=\paperheight]{../wallpaper.png}}%
+  }
+  \thispagestyle{empty}
+
+  \begin{multicols}{3}
+    \begin{tcolorbox}[colback=bg, colframe=bg_alt, coltitle=fg, title=Collatz' Conjecture, fonttitle=\bfseries]
+      \color{fg}
+      Suppose that $f: \N \to \N$ is defined as:
+      \begin{equation*}
+        f(n) := \begin{cases}
+                  n / 2 & n \in 2\N, \\
+                  3n + 1 & \textrm{otherwise.}
+                \end{cases}
+      \end{equation*}
+      and for each $n \in \N$ let $n_{0} := n$ and $n_{k} := f(n_{k-1})$ for $k = 1, 2, \ldots$, then for all $n \in \N$, there exists a $k \in \N$ such that $n_{k} = 1$.
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=bg, colframe=bg_alt, coltitle=fg, title=Goldbach's Conjecture, fonttitle=\bfseries]
+      \color{fg}
+      Let $k \in \N$, such that $k \geq 2$, and $n = 2k$, then $\exists p, q \in \N$, prime, such that $n = p + q$.
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=bg, colframe=bg_alt, coltitle=fg, title=Gauss-Bonnet Theorem, fonttitle=\bfseries]
+      \color{fg}
+      Let $\mathcal{S}$, be a smooth compact surface in $\R^{3}$ and $T$ be a triangulation on $\mathcal{S}$, then
+      \begin{equation*}
+        \iint_{s} k dA = 2\pi \chi(S; T)
+      \end{equation*}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=bg, colframe=bg_alt, coltitle=fg, title=Taylor's Theorem, fonttitle=\bfseries]
+      \color{fg}
+      Let $f \in C^{\infty}(\R; \R)$, then $\exists s \in \R$ such that:
+      \begin{equation*}
+        f(x) = \sum^{k}_{n = 0} \frac{f^{(n)}(0)}{n!}x^{n} + \frac{f^{(k + 1)(s)}}{(k + 1)!}x^{k + 1}
+      \end{equation*}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=bg, colframe=bg_alt, coltitle=fg, title=Theorema Egregium, fonttitle=\bfseries]
+      \color{fg}
+      Let $\mathcal{S}_{1}, \mathcal{S}_{2}$, be smooth surfaces in $\R^{3}$, $F: \mathcal{S}_{1} \to \mathcal{S}_{2}$ be a local isometry, and $p \in \mathcal{S}_{1}$ then $k(p) = k(F(p))$.
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colback=bg, colframe=bg_alt, coltitle=fg, title=Lagrange's Theorem, fonttitle=\bfseries]
+      \color{fg}
+      Suppose $G$ is a finite group, and $H \subseteq G$ a subgroup, then
+      \begin{equation*}
+        \abs{G}=\abs{G/H}\abs{H}
+      \end{equation*}
+    \end{tcolorbox}
+  \end{multicols}
+\end{document}
